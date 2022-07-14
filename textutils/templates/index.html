@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text utility</title>
+</head>
+<body>
+    <h1>TEXT EDITOR</h1>
+    <p>You can modify you text using this text editor.</p>
+    <form action="http://127.0.0.1:8000/analyze" method="get">
+        <textarea name="text" id="text" cols="120" rows="10" placeholder="ENTER YOUR TEXT HERE"></textarea><br>
+        <label for="rmv_space">
+            <input type="checkbox" name="rmv_space" id="rmv_space">remove spaces  
+        </label>
+        <label for="capitalize">
+            <input type="checkbox" name="capitalize" id="capitalize">capitalize
+        </label>
+        <label for="rmv_punct">
+            <input type="checkbox" name="rmv_punct" id="rmv_punct">remove punctuations
+        </label>
+        <label for="count">
+            <input type="checkbox" name="count" id="count">count
+        </label>
+
+        <br>
+        <button type="submit">Analyse</button>
+    </form>
+    
+</body>
+</html>
