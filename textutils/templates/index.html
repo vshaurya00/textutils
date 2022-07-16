@@ -1,32 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>text utility</title>
-</head>
-<body>
-    <h1>TEXT EDITOR</h1>
-    <p>You can modify you text using this text editor.</p>
-    <form action="http://127.0.0.1:8000/analyze" method="get">
-        <textarea name="text" id="text" cols="120" rows="10" placeholder="ENTER YOUR TEXT HERE"></textarea><br>
-        <label for="rmv_space">
-            <input type="checkbox" name="rmv_space" id="rmv_space">remove spaces  
-        </label>
-        <label for="capitalize">
-            <input type="checkbox" name="capitalize" id="capitalize">capitalize
-        </label>
-        <label for="rmv_punct">
-            <input type="checkbox" name="rmv_punct" id="rmv_punct">remove punctuations
-        </label>
-        <label for="count">
-            <input type="checkbox" name="count" id="count">count
-        </label>
 
-        <br>
-        <button type="submit">Analyse</button>
-    </form>
-    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TeXTUtilsc</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Developed By: Shaurya Verma</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-dark" role="alert">
+        Welcome! You are at shaurya's website
+    </div>
+    <div class="accordion" id="accordion1">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Features
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is a website where you can make your unorganised words or sentences neat and
+                        tidy.</strong> There are four features provided by us on this website. You can either
+                    <b>capitalize your text, remove extra spaces, remove punctuations, count umber of words</b>
+                </div>
+            </div>
+        </div>
+        <form action="http://127.0.0.1:5500/analyze" method="get">
+            <div class="mb-3">
+                <label for="text" class="form-label"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                    placeholder="ENTER YOU TEXT HERE..."></textarea>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault" name="rmv_space">Remove Spaces</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault" name="capitalize">Capitalize</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault" name="rmv_punct">Remove Punctuations</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault" name="count">Count</label>
+            </div><br>
+
+            <div>
+                <label for="analyze">
+                    <button type="submit" class="btn btn-outline-primary">Analyze</button>
+                </label>
+            </div>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>

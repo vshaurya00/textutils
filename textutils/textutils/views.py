@@ -5,7 +5,7 @@ def caps(txt):
     return txt.capitalize()
 
 def spa(txt):
-    st = ""
+    st = "" 
     for i in range(len(txt)):
         if not(txt[i]==" " and txt[i+1]==" "):
             st = st + txt[i]
@@ -13,7 +13,7 @@ def spa(txt):
 
 def repunc(txt):
     sr = ""
-    p = ['.', '?',' "','\' ',' ,',' -', '!', ':', ';']
+    p = ['.', '?', '"', '\' ', ' ,', ' -', '!', ':', ';']
     for i in txt:
         if i not in p:
             sr = sr+i
@@ -22,7 +22,6 @@ def repunc(txt):
 def cnt(txt):
     l = txt.split(" ")
     return len(l)
-
 
 def index(request):
     return render(request, 'index.html')
@@ -72,10 +71,4 @@ def analyze(request):
     elif count == 'on':
         f = cnt(txt)
         params= {'op':'counting....', 'file':f}
-        return render(request, 'otpt.html', params)
-
-
-
-
-
-
+        return render(request, 'otpt.html', params) 
